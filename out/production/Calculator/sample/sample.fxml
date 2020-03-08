@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="355.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="250.0">
+          <children>
+              <StackPane prefHeight="70.0" prefWidth="200.0">
+                  <children>
+                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5fffc" height="60.0" stroke="BLACK" strokeType="INSIDE" width="231.0" />
+                      <Text fx:id="output">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  </children>
+                  <VBox.margin>
+                      <Insets bottom="10.0" top="10.0" />
+                  </VBox.margin>
+              </StackPane>
+      
+              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                      <Button mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="110.0" text="&lt;--">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                      </Button>
+                  <Button layoutX="135.0" layoutY="19.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="C" />
+                  <Button layoutX="165.0" layoutY="19.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="+" />
+                  </children>
+                  <VBox.margin>
+                      <Insets bottom="10.0" />
+                  </VBox.margin>
+              </HBox>
+      
+              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="7" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="8" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="9" />
+                      <Button mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="-">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                      </Button>
+                  </children>
+                  <VBox.margin>
+                      <Insets bottom="10.0" />
+                  </VBox.margin>
+              </HBox>
+      
+              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="4" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="5" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="6" />
+                      <Button mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="*">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                      </Button>
+                  </children>
+                  <VBox.margin>
+                      <Insets bottom="10.0" />
+                  </VBox.margin>
+              </HBox>
+      
+              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="1" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="2" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="3" />
+                      <Button mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="/">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                      </Button>
+                  </children>
+                  <VBox.margin>
+                      <Insets bottom="10.0" />
+                  </VBox.margin>
+              </HBox>
+      
+              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="110.0" text="0" />
+                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="." />
+                      <Button mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="=">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                      </Button>
+                  </children>
+                  <padding>
+                      <Insets bottom="10.0" />
+                  </padding>
+              </HBox>
+      
+      
+          </children>
+      </VBox>
+      <TableView layoutX="250.0" layoutY="9.0" prefHeight="337.0" prefWidth="136.0">
+        <columns>
+          <TableColumn maxWidth="500.0" prefWidth="135.0" text="История" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
