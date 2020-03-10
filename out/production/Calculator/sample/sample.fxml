@@ -13,7 +13,7 @@
               <StackPane prefHeight="70.0" prefWidth="200.0">
                   <children>
                       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5fffc" height="60.0" stroke="BLACK" strokeType="INSIDE" width="231.0" />
-                      <Text fx:id="output">
+                      <Text fx:id="output" textAlignment="RIGHT" wrappingWidth="210.0">
                      <font>
                         <Font size="20.0" />
                      </font></Text>
@@ -89,7 +89,7 @@
               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                   <children>
                       <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="110.0" text="0" />
-                      <Button mnemonicParsing="false" onAction="#processNum" prefHeight="50.0" prefWidth="50.0" text="." />
+                      <Button mnemonicParsing="false" onAction="#processPoint" prefHeight="50.0" prefWidth="50.0" text="." />
                       <Button mnemonicParsing="false" onAction="#processOperator" prefHeight="50.0" prefWidth="50.0" text="=">
                           <HBox.margin>
                               <Insets />
@@ -104,9 +104,9 @@
       
           </children>
       </VBox>
-      <TableView layoutX="250.0" layoutY="9.0" prefHeight="337.0" prefWidth="136.0">
+      <TableView fx:id="table" layoutX="250.0" layoutY="9.0" onSort="#loadDataFromDatabase" prefHeight="337.0" prefWidth="136.0">
         <columns>
-          <TableColumn maxWidth="500.0" prefWidth="135.0" text="История" />
+          <TableColumn fx:id="column_calc" maxWidth="500.0" prefWidth="135.0" text="История" />
         </columns>
       </TableView>
    </children>
